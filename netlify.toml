@@ -1,0 +1,19 @@
+# netlify.toml
+# Place this in the root of your repository
+
+[build]
+  functions = "netlify/functions"
+  publish = "."
+
+[functions]
+  # Set longer timeout for large file uploads
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Environment variables (set these in Netlify dashboard):
+# GITHUB_TOKEN = your_github_personal_access_token
+# GITHUB_USERNAME = your_github_username
