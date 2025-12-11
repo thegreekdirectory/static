@@ -1,0 +1,8 @@
+{
+  "name": "static-media-uploader",
+  "version": "1.0.0",
+  "description": "Static media upload service for The Greek Directory",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
